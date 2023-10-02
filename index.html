@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fisio Nassau</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-      <img src="title-fisio-nassau.png" alt="Título">
+      <img id="logo" src="title-fisio-nassau.png" alt="Título">
+      <hr id="transition">
     </header>
     <form id="myForm" onsubmit="return sendForm()">
       <h1>Contato</h1>
@@ -59,7 +61,7 @@
         </select>
         </p>
         <p>
-          <label for="text-area">Escreva aqui</label><br>
+          <label for="text-area">Escreva sua dúvida</label><br>
           <textarea name="text-area" id="text-area" cols="50" rows="10" required autofocus></textarea>
         </p>
         <p>
@@ -67,7 +69,14 @@
         </p>
     </form>
     <footer>
-      
+      <div id="network">
+        <ul>
+          <li><img src="icons-network/instagram.png" alt="instagram"></li>
+          <li><img src="icons-network/facebook.png" alt="facebook"></li>
+          <li><img src="icons-network/whatsapp.png" alt="whatsapp"></li>
+          <li><img src="icons-network/twitter.png" alt="twitter"></li>
+        </ul>
+      </div>
     </footer>
     <script src="script.js"></script>
 </body>
