@@ -3,27 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fisio Nassau</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form>
+    <header>
+      <img src="title-fisio-nassau.png" alt="Título">
+    </header>
+    <form id="myForm" onsubmit="return sendForm()">
       <h1>Contato</h1>
         <p>
           <label for="first-name">Primeiro nome</label><br>
-          <input type="text" id="first-name" name="first_name" placeholder="Nome *" required>
+          <input type="text" id="first-name" name="first-name" placeholder="Nome *" required autofocus>
+          
         </p>
         <p>
           <label for="last-name">Sobrenome</label><br>
-          <input type="text" id="last-name" name="last_name" placeholder="Sobrenome *" required>
+          <input type="text" id="last-name" name="last-name" placeholder="Sobrenome *" required autofocus>
         </p>
         <p>
           <label for="city">Cidade</label><br>
-          <input type="text" id="city" name="city" placeholder="Cidade *" required>
+          <input type="text" id="city" name="city" placeholder="Cidade *" required autofocus>
         </p>
         <p>
           <label for="state">Estado</label><br>
-          <select name="state" id="state" required>
+          <select name="state" id="state" required autofocus>
             <option value="" disabled selected>Selecione um Estado</option>
             <option value="Acre">Acre</option>
             <option value="Alagoas">Alagoas</option>
@@ -56,11 +60,15 @@
         </p>
         <p>
           <label for="text-area">Escreva aqui</label><br>
-          <textarea name="text-area" id="text-area" cols="50" rows="10" required></textarea>
+          <textarea name="text-area" id="text-area" cols="50" rows="10" required autofocus></textarea>
         </p>
         <p>
-          <button type="submit" onclick="alert('Mensagem enviada!')">Enviar</button>
+          <button type="submit">Enviar</button>
         </p>
     </form>
+    <footer>
+      
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
