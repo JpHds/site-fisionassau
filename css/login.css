@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+:root {
+    --green-of-logo: #8CC441;
+    --blue-of-logo: #5DD7E7;
+}
+
+body {
+    position: static;
+}
+
+form {
+    margin: 0;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 2em;
+    border-radius: 3px;
+}
+
+.login h1 {
+    color: rgb(53, 53, 53);
+}
+
+.login {
+    margin: 50px auto;
+    width: 500px;
+    height: 400px;
+    background: #5dd7e78f;
+    border-right: 40px solid var(--green-of-logo);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 40px 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.forgot {
+    display: inline-block;
+    padding-left: 200px;
+}
+
+.forgot a {
+    color: rgba(29, 29, 216, 0.753);
+    text-decoration: none;
+}
+
+.forgot a:hover{
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.signin {
+    width: 100%;
+    height: 50px;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+button[type="submit"] {
+    background: var(--green-of-logo);
+}
+
+
+@media screen and (max-width: 920px){
+    .login {
+        width: 215px;
+    }
+}
