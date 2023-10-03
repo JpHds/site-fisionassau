@@ -9,15 +9,54 @@
 </head>
 <body>
     <header>
-      <img id="logo" src="title-fisio-nassau.png" alt="Título">
-      <hr id="transition">
+        <img id="logo" src="title-fisio-nassau.png" alt="Título">
+        <hr id="transition">
+        <div class="navigation">
+          <ul>
+            <li class="list active">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/home.png" alt="home"></span>
+                <span class="title">Home</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/user.png" alt="user"></span>
+                <span class="title">User</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/messages.png" alt="messages"></span>
+                <span class="title">Messages</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/settings.png" alt="settings"></span>
+                <span class="title">Settings</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/help.png" alt="help"></span>
+                <span class="title">Help</span>
+              </a>
+            </li>
+            <li class="list">
+              <a href="#">
+                <span class="icon"><img src="icons-menu/exit.png" alt=""></span>
+                <span class="title">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </div>
     </header>
     <form id="myForm" onsubmit="return sendForm()">
       <h1>Contato</h1>
         <p>
           <label for="first-name">Primeiro nome</label><br>
           <input type="text" id="first-name" name="first-name" placeholder="Nome *" required autofocus>
-          
         </p>
         <p>
           <label for="last-name">Sobrenome</label><br>
@@ -61,7 +100,7 @@
         </select>
         </p>
         <p>
-          <label for="text-area">Escreva sua dúvida</label><br>
+          <label for="text-area">Qual a sua dúvida?</label><br>
           <textarea name="text-area" id="text-area" cols="50" rows="10" required autofocus></textarea>
         </p>
         <p>
@@ -69,6 +108,9 @@
         </p>
     </form>
     <footer>
+      <div class="footer-left">
+        <img src="imgs-footer/img-left.png" alt="left image">
+      </div>
       <div id="network">
         <ul>
           <li><img src="icons-network/instagram.png" alt="instagram"></li>
@@ -77,7 +119,16 @@
           <li><img src="icons-network/twitter.png" alt="twitter"></li>
         </ul>
       </div>
+      <div class="footer-right">
+        <img src="imgs-footer/img-right.png" alt="right image">
+      </div>
     </footer>
+    <footer id="second-footer">
+      <span>Copyright 2022 © - FisioNassau™</span>
+    </footer>
+    <div>
+      <a href="#" class="btn-for-top"></a>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

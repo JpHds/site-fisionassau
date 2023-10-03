@@ -2,20 +2,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Public+Sans:wght@100&family=Ruda:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
+:root {
+    --green-of-logo: #8CC441;
+    --blue-of-logo: #5DD7E7;
+}
+
+html {
+    height: 100%;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin-top: 150px;
+}
+
+/* Header */
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: white;
-}
-
-body {
-    margin-top: 200px;
+    background-color: rgb(255, 255, 255);
 }
 
 #logo {
-    width: clamp(20%, 30%, 35%);
+    width: 300px;
     padding:5px 0 5px 10px;
 }
 
@@ -24,9 +36,86 @@ body {
     border: 0.5px solid rgb(138, 135, 135);
 }
 
+/* Menu */
+
+.navigation {
+    position: absolute;
+    right: 0;
+    height: 500px;
+    background: var(--blue-of-logo);
+    width: 70px;
+    box-shadow: 10px 0 0 rgb(42, 107, 247);
+    border-right: 10px solid var(--green-of-logo);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.navigation:hover {
+    width: 250px;
+}
+
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 40px;
+}
+
+.navigation ul li {
+    position: relative;
+    list-style: none;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.navigation ul li a .icon img {
+    position: relative;
+    font-size: 1.5rem;
+    z-index: 1;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding-left: 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+
+.navigation ul li.active {
+    background: greenyellow;
+}
+
+
+/* Form */
+
 form {
     font-family: 'Raleway', sans-serif;
     margin-left: 10px;
+    margin-bottom: 80px;
 }
 
 input {
@@ -41,6 +130,8 @@ label {
 
 textarea {
     margin-top: 5px;
+    width: 500px;
+    resize: none;
 }
 
 #state {
@@ -56,23 +147,152 @@ button[type="submit"] {
     padding: 8px 10px;
 }
 
+/* Footer */
+
 footer {
-    display: grid;
-    grid-template-columns: 3;
-    column-gap: 30px;
     width: 100%;
-    background-color: #8CC441;
-    height: 10%;
-    position: relative;
+    height: 150px;
     bottom: 0;
+    background-color: #8CC441;
+    display: flex;
+    padding-top: 20px;
 }
 
 footer ul {
     list-style: none;
-    padding-top: 5px;
+    padding: 0;
+}
+
+#network {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#network ul{
+    display: flex;
+    column-gap: 5px;
+}
+
+#network ul li {
+    padding-right: 10px;
 }
 
 #network ul li img {
-    width: clamp(1em, 1.5em, 2em);
+    cursor: pointer;
+    width: 25px;
     height: auto;
+    box-shadow: 5px 5px 12px 0px #00000063;
+    border-radius: 25%;
+}
+
+.footer-right img {
+    width: 140px;
+    height: auto;
+    padding-right: 100px;
+}
+
+.footer-left img {
+    width: 140px;
+    height: auto;
+    padding-left: 100px;
+}
+
+#second-footer {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex; 
+}
+
+#second-footer span {
+    margin: auto;
+    padding-bottom: 5px;
+}
+
+
+/* Button for top */
+
+.btn-for-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 10px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue-of-logo);
+    box-shadow: 0px 0px 5px 0px #53535347;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 20;
+    visibility: hidden;
+}
+
+.btn-for-top::after {
+    content: "↑";
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--green-of-logo);
+    transition: margin-top 250ms;
+}
+
+.btn-for-top:hover::after {
+    margin-top:-8px;
+}
+
+.btn-for-top:hover {
+    text-decoration: none;
+}
+
+.btn-for-top.visible {
+    visibility: visible;
+}
+
+/* mobile */
+@media screen and (max-width: 635px){
+    #logo {
+        width: 150px;
+    }
+
+    body {
+        margin-top: 100px;
+    }
+
+    textarea {
+        width: 250px;
+    }
+
+    #network ul li img {
+        margin-top: 50px;
+    }
+    
+    .footer-right img {
+        width: 100px;
+        padding: 0;
+    }
+    
+    .footer-left img {
+        width: 100px;
+        padding: 0;
+    }
+}
+
+
+/* Adapt for ipad */
+@media screen and (max-width:912px) and (min-height:1000px) {
+    footer {    
+        position: absolute;
+        bottom: 0;
+    }
+}
+
+/* footer for tv/monitor */
+
+@media screen and (min-height: 950px ) {
+    footer {    
+        position: absolute;
+        bottom: 0;
+    }
 }
